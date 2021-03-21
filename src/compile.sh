@@ -244,7 +244,7 @@ if [ $configure -gt $tstamp ]; then
     fi
 
     #Disable PEAR installation (handled separately below).
-    ./configure $configoptions \
+    ./configure CFLAGS="-ggdb" $configoptions \
          --prefix="$instdir" \
          --exec-prefix='${prefix}' \
          --without-pear \
